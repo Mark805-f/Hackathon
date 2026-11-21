@@ -1,0 +1,764 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Challenge</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ANIMATED BACKGROUND -->
+<div class="animated-background">
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+    <div class="glow glow-three"></div>
+    <div id="particles"></div>
+</div>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-earth-europe"></i>
+            WORLD
+            <span>CHALLENGE</span>
+        </div>
+
+        <p class="side-label">MENU</p>
+
+        <button class="nav-item active" data-category="All">
+            <i class="fa-solid fa-earth-europe"></i>
+            All Questions
+        </button>
+
+        <button class="nav-item" data-category="Flags">
+            <i class="fa-solid fa-flag"></i>
+            Flags
+        </button>
+
+        <button class="nav-item" data-category="Geography">
+            <i class="fa-solid fa-map"></i>
+            Geography
+        </button>
+
+        <button class="nav-item" data-category="History">
+            <i class="fa-solid fa-landmark"></i>
+            History
+        </button>
+
+        <button class="nav-item" data-category="Science">
+            <i class="fa-solid fa-flask"></i>
+            Science
+        </button>
+
+        <button class="nav-item" data-category="World Facts">
+            <i class="fa-solid fa-globe"></i>
+            World Facts
+        </button>
+
+        <button class="nav-item" data-category="Technology">
+            <i class="fa-solid fa-microchip"></i>
+            Technology
+        </button>
+
+        <div class="sidebar-bottom">
+            <div class="profile-icon">
+                <i class="fa-solid fa-user-graduate"></i>
+            </div>
+
+            <div>
+                <strong>Quiz Explorer</strong>
+                <p>Knowledge Seeker</p>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+                <p class="welcome">WELCOME TO YOUR QUIZ</p>
+                <h1>World Challenge</h1>
+            </div>
+
+            <div class="top-stats">
+
+                <div class="stat">
+                    <span>
+                        <i class="fa-solid fa-trophy"></i>
+                        BEST SCORE
+                    </span>
+                    <strong id="best-score">0</strong>
+                </div>
+
+                <div class="stat">
+                    <span>
+                        <i class="fa-solid fa-star"></i>
+                        TOTAL POINTS
+                    </span>
+                    <strong id="score">0</strong>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD -->
+        <section class="dashboard">
+
+            <div class="dashboard-card">
+                <span><i class="fa-solid fa-clipboard-list"></i></span>
+                <div>
+                    <p>QUESTION</p>
+                    <h2 id="question-number">1 / 10</h2>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <span><i class="fa-solid fa-fire"></i></span>
+                <div>
+                    <p>CURRENT STREAK</p>
+                    <h2 id="streak">0</h2>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <span><i class="fa-solid fa-clock"></i></span>
+                <div>
+                    <p>TIME LEFT</p>
+                    <h2 id="timer">20s</h2>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <span><i class="fa-solid fa-bullseye"></i></span>
+                <div>
+                    <p>ACCURACY</p>
+                    <h2 id="accuracy">0%</h2>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- QUIZ AREA -->
+        <section class="quiz-layout">
+
+            <div class="quiz-card">
+
+                <div class="quiz-header">
+
+                    <div>
+                        <span class="category-label" id="category">
+                            GEOGRAPHY
+                        </span>
+
+                        <p class="small-text">
+                            Choose the correct answer
+                        </p>
+                    </div>
+
+                    <span class="difficulty" id="difficulty">
+                        EASY
+                    </span>
+
+                </div>
+
+                <div class="progress-track">
+                    <div id="progress-fill"></div>
+                </div>
+
+                <div class="question-content">
+
+                    <div class="question-visual" id="visual">
+                        <i class="fa-solid fa-earth-europe"></i>
+                    </div>
+
+                    <h2 id="question">Loading question...</h2>
+
+                    <div class="answers" id="answers"></div>
+
+                    <div id="feedback"></div>
+
+                    <div id="explanation"></div>
+
+                </div>
+
+                <div class="quiz-footer">
+
+                    <span id="question-progress">
+                        Question 1 of 10
+                    </span>
+
+                    <button id="next-btn" disabled>
+                        Next Question
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- POWER UPS -->
+            <aside class="tools-card">
+
+                <h2>
+                    <i class="fa-solid fa-bolt"></i>
+                    Power Ups
+                </h2>
+
+                <p class="tool-description">
+                    Use your rewards wisely!
+                </p>
+
+                <button id="hint-btn" class="power-button">
+
+                    <span class="power-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </span>
+
+                    <span>
+                        <strong>Get a Hint</strong>
+                        <small>Receive a helpful clue</small>
+                    </span>
+
+                    <b id="hint-count">2</b>
+
+                </button>
+
+                <button id="fifty-btn" class="power-button">
+
+                    <span class="power-icon">
+                        <i class="fa-solid fa-scissors"></i>
+                    </span>
+
+                    <span>
+                        <strong>50 / 50</strong>
+                        <small>Remove two wrong answers</small>
+                    </span>
+
+                    <b id="fifty-count">2</b>
+
+                </button>
+
+                <div class="reward-card">
+
+                    <span>
+                        <i class="fa-solid fa-gift"></i>
+                    </span>
+
+                    <h3>Earn rewards!</h3>
+
+                    <p>
+                        Answer 3 questions correctly to
+                        unlock additional power ups.
+                    </p>
+
+                </div>
+
+                <div class="rules">
+
+                    <h3>HOW TO PLAY</h3>
+
+                    <p><i class="fa-solid fa-check"></i> Correct answer: +100 points</p>
+                    <p><i class="fa-solid fa-fire"></i> Build your winning streak</p>
+                    <p><i class="fa-solid fa-gift"></i> Earn hints and 50/50s</p>
+                    <p><i class="fa-solid fa-flag-checkered"></i> Finish all 10 questions</p>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <span>
+                <i class="fa-solid fa-earth-europe"></i>
+                WORLD CHALLENGE
+            </span>
+
+            <span>Learn something new every day.</span>
+        </footer>
+
+        <!-- DAILY CHALLENGES -->
+<section class="daily-section">
+
+    <div class="daily-heading">
+        <div>
+            <span class="daily-tag">
+                <i class="fa-solid fa-calendar-day"></i>
+                DAILY MISSIONS
+            </span>
+
+            <h2>Daily Challenges</h2>
+
+            <p>Complete today's missions and earn exclusive rewards.</p>
+        </div>
+
+        <div class="daily-reset">
+            <i class="fa-solid fa-clock"></i>
+            <span>New challenge in</span>
+            <strong id="daily-countdown">00:00:00</strong>
+        </div>
+    </div>
+
+    <div class="daily-grid">
+
+        <!-- MAIN CHALLENGE -->
+        <div class="daily-main-card">
+
+            <div class="daily-card-top">
+                <span class="daily-live">
+                    <span class="live-dot"></span>
+                    AVAILABLE TODAY
+                </span>
+
+                <i class="fa-solid fa-earth-europe daily-globe"></i>
+            </div>
+
+            <h3>The World Explorer</h3>
+
+            <p>
+                Answer five random world knowledge questions
+                and prove that you're a true explorer.
+            </p>
+
+            <div class="daily-reward">
+                <div>
+                    <i class="fa-solid fa-star"></i>
+                    <strong>100 XP</strong>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-fire"></i>
+                    <strong>Streak reward</strong>
+                </div>
+            </div>
+
+            <div class="daily-progress-heading">
+                <span>Mission progress</span>
+                <strong id="daily-progress-text">0 / 5</strong>
+            </div>
+
+            <div class="daily-progress-track">
+                <div id="daily-progress-fill"></div>
+            </div>
+
+            <button id="daily-start-btn" class="daily-start-btn">
+                <i class="fa-solid fa-play"></i>
+                START DAILY CHALLENGE
+            </button>
+
+            <p id="daily-status" class="daily-status">
+                Complete all five questions to claim your reward.
+            </p>
+
+        </div>
+
+        <!-- DAILY STREAK -->
+        <div class="daily-side-card">
+
+            <div class="daily-side-icon">
+                <i class="fa-solid fa-fire"></i>
+            </div>
+
+            <h3>Daily Streak</h3>
+
+            <div class="daily-streak-number">
+                <strong id="daily-streak">0</strong>
+                <span> DAYS</span>
+            </div>
+
+            <p>Keep completing daily missions to build your streak.</p>
+
+            <div class="streak-days">
+                <div class="streak-day">
+                    <span>M</span>
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div class="streak-day">
+                    <span>T</span>
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div class="streak-day">
+                    <span>W</span>
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div class="streak-day">
+                    <span>T</span>
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div class="streak-day">
+                    <span>F</span>
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div class="streak-day">
+                    <span>S</span>
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div class="streak-day">
+                    <span>S</span>
+                    <i class="fa-solid fa-check"></i>
+                </div>
+            </div>
+
+            <div class="streak-bonus">
+                <i class="fa-solid fa-gift"></i>
+                <span>Complete daily missions to maintain your streak!</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- MYSTERY CHEST -->
+        <section class="chest-section">
+
+            <div class="section-heading">
+
+                <span>
+                    <i class="fa-solid fa-gift"></i>
+                    SPECIAL REWARDS
+                </span>
+
+                <h2>Mystery Chest</h2>
+
+                <p>Earn rewards by proving your knowledge!</p>
+
+            </div>
+
+            <div class="chest-card">
+
+                <div class="chest-glow"></div>
+
+                <div class="chest-image" id="chest-image">
+                    <i class="fa-solid fa-box-open"></i>
+                </div>
+
+                <h2>Golden Mystery Chest</h2>
+
+                <p>Open your chest to discover a random reward.</p>
+
+                <div class="chest-counter">
+                    Available chests:
+                    <strong id="chest-count">0</strong>
+                </div>
+
+                <button id="open-chest">
+                    <i class="fa-solid fa-lock-open"></i>
+                    OPEN CHEST
+                </button>
+
+                <p id="chest-reward"></p>
+
+                <div class="chest-progress">
+
+                    <p>Next chest progress</p>
+
+                    <div class="chest-progress-track">
+                        <div id="chest-progress-fill"></div>
+                    </div>
+
+                    <small id="chest-progress-text">
+                        0 / 5 correct answers
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECRET AREA -->
+        <section class="secret-bottom">
+
+            <div class="secret-content">
+
+                <div class="secret-icon">
+                    <i class="fa-solid fa-user-secret"></i>
+                </div>
+
+                <h2>Discover the Unknown</h2>
+
+                <p>
+                    Think you know everything?
+                    Enter the secret code to unlock a hidden challenge.
+                </p>
+
+                <div class="secret-input-area">
+
+                    <input
+                        type="text"
+                        id="secret-code"
+                        placeholder="Enter secret code..."
+                    >
+
+                    <button id="unlock-secret">
+                        UNLOCK
+                        <i class="fa-solid fa-lock-open"></i>
+                    </button>
+
+                </div>
+
+                <p id="secret-message" aria-live="polite"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PLAYER PROGRESSION -->
+        <section class="progression-section">
+
+            <div class="section-heading">
+
+                <span>
+                    <i class="fa-solid fa-trophy"></i>
+                    YOUR JOURNEY
+                </span>
+
+                <h2>Player Progression</h2>
+
+                <p>Play, earn XP and become a world legend.</p>
+
+            </div>
+
+
+            <!-- PROFILE -->
+            <div class="profile-card">
+
+                <div class="profile-avatar">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+
+                <div class="profile-info">
+                    <h2 id="player-name-display">Quiz Explorer</h2>
+                    <p id="player-level">Level 1 - Explorer</p>
+                </div>
+
+                <div class="xp-total">
+                    <strong id="xp-total">0 XP</strong>
+                    <span>Total Experience</span>
+                </div>
+
+                <div class="name-editor">
+
+                    <input
+                        id="player-name-input"
+                        type="text"
+                        maxlength="20"
+                        placeholder="Choose your name"
+                    >
+
+                    <button id="save-player-name">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        SAVE NAME
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- XP BAR -->
+            <div class="xp-card">
+
+                <div class="xp-heading">
+                    <strong>
+                        <i class="fa-solid fa-chart-line"></i>
+                        Level Progress
+                    </strong>
+
+                    <span id="xp-progress-text">0 / 100 XP</span>
+                </div>
+
+                <div class="xp-track">
+                    <div id="xp-progress-fill"></div>
+                </div>
+
+                <p id="next-level-text">
+                    100 XP until Traveller
+                </p>
+
+            </div>
+
+
+            <!-- STATS -->
+            <div class="progression-stats">
+
+                <div class="progress-stat">
+                    <span><i class="fa-solid fa-gamepad"></i></span>
+                    <strong id="games-played">0</strong>
+                    <p>Games Played</p>
+                </div>
+
+                <div class="progress-stat">
+                    <span><i class="fa-solid fa-circle-check"></i></span>
+                    <strong id="total-correct">0</strong>
+                    <p>Correct Answers</p>
+                </div>
+
+                <div class="progress-stat">
+                    <span><i class="fa-solid fa-fire"></i></span>
+                    <strong id="best-streak">0</strong>
+                    <p>Best Streak</p>
+                </div>
+
+                <div class="progress-stat">
+                    <span><i class="fa-solid fa-medal"></i></span>
+                    <strong id="achievement-count">0</strong>
+                    <p>Achievements</p>
+                </div>
+
+            </div>
+
+
+            <!-- ACHIEVEMENTS -->
+            <div class="achievement-card">
+
+                <h2>
+                    <i class="fa-solid fa-award"></i>
+                    Achievements
+                </h2>
+
+                <p>Your unlocked rewards</p>
+
+                <div id="achievements-list" class="achievements-list">
+                </div>
+
+            </div>
+
+
+            <!-- LEADERBOARD -->
+            <div class="leaderboard-card">
+
+                <h2>
+                    <i class="fa-solid fa-ranking-star"></i>
+                    Personal Leaderboard
+                </h2>
+
+                <p>Best scores saved on this browser</p>
+
+                <div id="leaderboard-list"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- RESULTS SCREEN -->
+<div id="result-screen" class="result-screen hidden">
+
+    <div class="result-box">
+
+        <div class="result-trophy">
+            <i class="fa-solid fa-trophy"></i>
+        </div>
+
+        <h1>Quiz Completed!</h1>
+
+        <p>Great job completing the challenge.</p>
+
+        <div class="final-score" id="final-score">0</div>
+
+        <p>YOUR FINAL SCORE</p>
+
+        <div class="result-stats">
+
+            <div>
+                <strong id="final-correct">0</strong>
+                <span>Correct</span>
+            </div>
+
+            <div>
+                <strong id="final-accuracy">0%</strong>
+                <span>Accuracy</span>
+            </div>
+
+        </div>
+
+        <button id="play-again">
+            Play Again
+            <i class="fa-solid fa-rotate-right"></i>
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- LEVEL UP POPUP -->
+<div id="levelup-screen" class="levelup-screen">
+
+    <div class="levelup-box">
+
+        <div class="levelup-rays"></div>
+
+        <div class="levelup-trophy">
+            <i class="fa-solid fa-trophy"></i>
+        </div>
+
+        <p class="levelup-label">CONGRATULATIONS!</p>
+
+        <h1>LEVEL UP!</h1>
+
+        <p class="levelup-subtitle">
+            You have reached a new level!
+        </p>
+
+        <div class="new-level">
+            <span id="new-level-number">LEVEL 2</span>
+        </div>
+
+        <h2 id="new-level-name">Traveller</h2>
+
+        <p class="levelup-message">
+            Your journey continues. Keep exploring!
+        </p>
+
+        <button id="close-levelup">
+            CONTINUE
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+    </div>
+
+    <div id="levelup-confetti"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
