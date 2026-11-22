@@ -856,6 +856,7 @@ function showQuestion() {
     doubleActive = false;
 
     const q = selectedQuestions[currentQuestion];
+    document.querySelector(".quiz-card").dataset.cat = q.category;
 
     // Flag questions get fresh wrong answers every time
     if (q.flag) refreshFlagAnswers(q);

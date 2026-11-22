@@ -20,7 +20,7 @@
         ["fi", "Finland", "Europe"],
         ["ua", "Ukraine", "Europe"],
         ["cz", "Czechia", "Europe"],
-        ["hu", "Hungary", "Europe"],
+        ["ks", "Kosovo", "Europe"],
 
         // Asia
         ["th", "Thailand", "Asia"],

@@ -2191,3 +2191,15 @@ body::before {
 .europe-blind .country.map-correct { fill: #48d89a; stroke: #48d89a; }
 .europe-blind .country.map-wrong   { fill: #ff7185; stroke: #ff7185; }
 .europe-blind .country.map-reveal  { fill: #ffd166; stroke: #ffd166; }
+
+.quiz-card { --accent: #61d4f1; border-top: 3px solid var(--accent); }
+.quiz-card[data-cat="Geography"]   { --accent: #48d89a; }
+.quiz-card[data-cat="History"]     { --accent: #ffb45f; }
+.quiz-card[data-cat="Science"]     { --accent: #5ea8ff; }
+.quiz-card[data-cat="Technology"]  { --accent: #a78bfa; }
+.quiz-card[data-cat="Flags"]       { --accent: #ff7185; }
+.quiz-card[data-cat="World Facts"] { --accent: #2dd4bf; }
+
+.category-label { color: var(--accent); }
+#progress-fill  { background: linear-gradient(90deg, var(--accent), #8d83ff); }
+.answer:hover:not(:disabled) { border-color: var(--accent); }
