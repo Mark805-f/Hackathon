@@ -1,0 +1,52 @@
+/* =====================================
+   ANSWER ANIMATIONS
+   Link this AFTER your other stylesheets:
+   <link rel="stylesheet" href="animations.css">
+   ===================================== */
+
+/* Answers slide in one after another when a question appears */
+.answers .answer {
+    animation: answerIn .35s ease backwards;
+}
+.answers .answer:nth-child(1) { animation-delay: .00s; }
+.answers .answer:nth-child(2) { animation-delay: .06s; }
+.answers .answer:nth-child(3) { animation-delay: .12s; }
+.answers .answer:nth-child(4) { animation-delay: .18s; }
+
+/* Correct answer: green pulse with a glow ring */
+.answers .answer.correct {
+    animation: answerPulse .6s ease;
+}
+
+/* Wrong answer: quick shake */
+.answers .answer.wrong {
+    animation: answerShake .45s ease;
+}
+
+@keyframes answerIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes answerPulse {
+    0%   { transform: scale(1);    box-shadow: 0 0 0 0 rgba(72, 216, 154, .7); }
+    40%  { transform: scale(1.04); box-shadow: 0 0 0 12px rgba(72, 216, 154, 0); }
+    100% { transform: scale(1);    box-shadow: 0 0 0 0 rgba(72, 216, 154, 0); }
+}
+
+@keyframes answerShake {
+    0%, 100% { transform: translateX(0); }
+    20%      { transform: translateX(-10px); }
+    40%      { transform: translateX(9px); }
+    60%      { transform: translateX(-6px); }
+    80%      { transform: translateX(4px); }
+}
+
+/* Players who prefer less motion get no animations */
+@media (prefers-reduced-motion: reduce) {
+    .answers .answer,
+    .answers .answer.correct,
+    .answers .answer.wrong {
+        animation: none;
+    }
+}

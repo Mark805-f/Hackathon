@@ -79,6 +79,7 @@ const questions = [
     // TECHNOLOGY
     {
         category: "Technology",
+        sub: "Programming",
         visual: "💻",
         question: "What does the acronym API stand for?",
         answers: ["Automated Program Interaction", "Application Programming Interface", "Advanced Protocol Integration", "Applied Process Indicator"],
@@ -88,6 +89,7 @@ const questions = [
     },
     {
         category: "Technology",
+        sub: "Programming",
         visual: "📚",
         question: "Which data structure operates on a Last-In, First-Out (LIFO) principle?",
         answers: ["Queue", "Array", "Stack", "Linked List"],
@@ -97,6 +99,7 @@ const questions = [
     },
     {
         category: "Technology",
+        sub: "Programming",
         visual: "♾️",
         question: "What is an infinite loop?",
         answers: ["A loop that runs a predetermined number of times", "A loop whose terminating condition is never met", "A loop nested inside another loop", "A loop that skips its first iteration"],
@@ -106,6 +109,7 @@ const questions = [
     },
     {
         category: "Technology",
+        sub: "Programming",
         visual: "🧩",
         question: "Which of the following is NOT an object-oriented programming (OOP) concept?",
         answers: ["Encapsulation", "Polymorphism", "Inheritance", "Compilation"],
@@ -170,7 +174,253 @@ const questions = [
         correct: "Heart",
         hint: "You can feel its beating in your chest.",
         explanation: "The heart pumps blood through the circulatory system."
-    }
+    },
+
+
+    // =====================================
+    // MORE GEOGRAPHY
+    // =====================================
+    { category: "Geography", difficulty: "easy", visual: "🗼", question: "Which river flows through Paris?",
+      answers: ["Thames", "Seine", "Rhine", "Danube"], correct: "Seine",
+      hint: "It runs past the Eiffel Tower.", explanation: "The Seine flows through the centre of Paris." },
+    { category: "Geography", difficulty: "easy", visual: "🗺️", question: "Which is the largest country in the world by area?",
+      answers: ["Canada", "China", "United States", "Russia"], correct: "Russia",
+      hint: "It spans eleven time zones.", explanation: "Russia covers about 17 million square kilometres." },
+    { category: "Geography", difficulty: "normal", visual: "🦘", question: "What is the capital of Australia?",
+      answers: ["Sydney", "Melbourne", "Canberra", "Perth"], correct: "Canberra",
+      hint: "It is not the biggest city, which is why it is a popular trick question.", explanation: "Canberra was purpose-built as the capital." },
+    { category: "Geography", difficulty: "easy", visual: "🍁", question: "What is the capital of Canada?",
+      answers: ["Toronto", "Vancouver", "Montreal", "Ottawa"], correct: "Ottawa",
+      hint: "It sits on the border between Ontario and Quebec.", explanation: "Ottawa is the capital of Canada." },
+    { category: "Geography", difficulty: "normal", visual: "🧊", question: "What is the largest island in the world?",
+      answers: ["Madagascar", "Greenland", "Borneo", "New Guinea"], correct: "Greenland",
+      hint: "Most of it is covered by an ice sheet.", explanation: "Greenland is the largest island that is not a continent." },
+    { category: "Geography", difficulty: "hard", visual: "🌍", question: "Which continent has the most countries?",
+      answers: ["Asia", "Europe", "Africa", "South America"], correct: "Africa",
+      hint: "It has more than 50 recognised countries.", explanation: "Africa has 54 recognised countries." },
+    { category: "Geography", difficulty: "normal", visual: "🌉", question: "Which strait separates Spain from Morocco?",
+      answers: ["Bosphorus", "Strait of Gibraltar", "Strait of Hormuz", "English Channel"], correct: "Strait of Gibraltar",
+      hint: "It connects the Atlantic Ocean and the Mediterranean Sea.", explanation: "The Strait of Gibraltar is only about 14 km wide at its narrowest." },
+    { category: "Geography", difficulty: "easy", visual: "🗾", question: "What is the capital of Japan?",
+      answers: ["Kyoto", "Osaka", "Tokyo", "Seoul"], correct: "Tokyo",
+      hint: "It is one of the largest cities in the world.", explanation: "Tokyo is the capital of Japan." },
+    { category: "Geography", difficulty: "normal", visual: "🏙️", question: "What is the capital of Brazil?",
+      answers: ["Rio de Janeiro", "São Paulo", "Brasília", "Salvador"], correct: "Brasília",
+      hint: "It is not Rio de Janeiro, even though many people think so.", explanation: "Brasília became Brazil's capital in 1960." },
+    { category: "Geography", difficulty: "easy", visual: "🐪", question: "What is the capital of Egypt?",
+      answers: ["Alexandria", "Cairo", "Luxor", "Giza"], correct: "Cairo",
+      hint: "It lies on the River Nile.", explanation: "Cairo is the capital and largest city of Egypt." },
+    { category: "Geography", difficulty: "easy", visual: "🥾", question: "Which country is shaped like a boot?",
+      answers: ["Greece", "Portugal", "Italy", "Croatia"], correct: "Italy",
+      hint: "Its capital is Rome.", explanation: "Italy's outline looks like a boot kicking the island of Sicily." },
+    { category: "Geography", difficulty: "easy", visual: "🏛️", question: "What is the capital of Poland?",
+      answers: ["Kraków", "Gdańsk", "Warsaw", "Wrocław"], correct: "Warsaw",
+      hint: "It lies on the Vistula River.", explanation: "Warsaw is the capital and largest city of Poland." },
+    { category: "Geography", difficulty: "normal", visual: "🌋", question: "In which country is Mount Kilimanjaro located?",
+      answers: ["Kenya", "Tanzania", "Uganda", "Ethiopia"], correct: "Tanzania",
+      hint: "It is the highest mountain in Africa.", explanation: "Kilimanjaro is in northeastern Tanzania, near the Kenyan border." },
+    { category: "Geography", difficulty: "hard", visual: "⛰️", question: "Which is the longest mountain range on land?",
+      answers: ["Himalayas", "Rocky Mountains", "Andes", "Alps"], correct: "Andes",
+      hint: "It runs along the western edge of South America.", explanation: "The Andes stretch about 7,000 km along South America." },
+    { category: "Geography", difficulty: "normal", visual: "🏜️", question: "Which desert covers much of Mongolia and northern China?",
+      answers: ["Sahara", "Gobi", "Kalahari", "Atacama"], correct: "Gobi",
+      hint: "It is a cold desert in Asia.", explanation: "The Gobi is a large desert region in northern China and southern Mongolia." },
+    { category: "Geography", difficulty: "easy", visual: "🌐", question: "What is the smallest continent by land area?",
+      answers: ["Europe", "Antarctica", "Australia/Oceania", "South America"], correct: "Australia/Oceania",
+      hint: "It is surrounded by the Pacific and Indian Oceans.", explanation: "Australia/Oceania is the smallest continent by land area." },
+
+    // =====================================
+    // MORE HISTORY
+    // =====================================
+    { category: "History", difficulty: "easy", visual: "🕊️", question: "In which year did World War II end?",
+      answers: ["1918", "1939", "1945", "1950"], correct: "1945",
+      hint: "It was the middle of the 1940s.", explanation: "World War II ended in 1945." },
+    { category: "History", difficulty: "easy", visual: "🇺🇸", question: "Who was the first President of the United States?",
+      answers: ["Abraham Lincoln", "George Washington", "Thomas Jefferson", "John Adams"], correct: "George Washington",
+      hint: "He appears on the one-dollar bill.", explanation: "George Washington served as president from 1789 to 1797." },
+    { category: "History", difficulty: "normal", visual: "🧱", question: "In which year did the Berlin Wall fall?",
+      answers: ["1979", "1985", "1989", "1991"], correct: "1989",
+      hint: "It was the year before German reunification.", explanation: "The Berlin Wall fell on 9 November 1989." },
+    { category: "History", difficulty: "normal", visual: "🚢", question: "Which ship sank on its maiden voyage in 1912?",
+      answers: ["Lusitania", "Titanic", "Britannic", "Bismarck"], correct: "Titanic",
+      hint: "It hit an iceberg in the North Atlantic.", explanation: "The Titanic sank on 15 April 1912." },
+    { category: "History", difficulty: "hard", visual: "⚔️", question: "Who was the first emperor of Rome?",
+      answers: ["Julius Caesar", "Nero", "Augustus", "Constantine"], correct: "Augustus",
+      hint: "He was Julius Caesar's adopted heir.", explanation: "Augustus became the first Roman emperor in 27 BC." },
+    { category: "History", difficulty: "normal", visual: "🎨", question: "In which country did the Renaissance begin?",
+      answers: ["France", "England", "Italy", "Spain"], correct: "Italy",
+      hint: "Think of Florence and Leonardo da Vinci.", explanation: "The Renaissance began in Italy in the 14th century." },
+    { category: "History", difficulty: "easy", visual: "🖼️", question: "Who painted the Mona Lisa?",
+      answers: ["Michelangelo", "Leonardo da Vinci", "Raphael", "Vincent van Gogh"], correct: "Leonardo da Vinci",
+      hint: "He was also an inventor and engineer.", explanation: "Leonardo da Vinci painted the Mona Lisa in the early 1500s." },
+    { category: "History", difficulty: "easy", visual: "🧭", question: "In which year did Columbus first reach the Americas?",
+      answers: ["1392", "1492", "1592", "1692"], correct: "1492",
+      hint: "\"In fourteen hundred ninety-two, Columbus sailed the ocean blue.\"", explanation: "Columbus reached the Caribbean in 1492." },
+    { category: "History", difficulty: "normal", visual: "⚜️", question: "In which year did the French Revolution begin?",
+      answers: ["1689", "1776", "1789", "1815"], correct: "1789",
+      hint: "It began with the storming of the Bastille.", explanation: "The French Revolution began in 1789." },
+    { category: "History", difficulty: "normal", visual: "🧑‍🚀", question: "Who was the first human to travel into space?",
+      answers: ["Neil Armstrong", "Yuri Gagarin", "Buzz Aldrin", "John Glenn"], correct: "Yuri Gagarin",
+      hint: "He was a Soviet cosmonaut.", explanation: "Yuri Gagarin orbited the Earth on 12 April 1961." },
+    { category: "History", difficulty: "normal", visual: "🐎", question: "Which empire was founded by Genghis Khan?",
+      answers: ["Ottoman Empire", "Mongol Empire", "Persian Empire", "Roman Empire"], correct: "Mongol Empire",
+      hint: "It became the largest contiguous land empire in history.", explanation: "Genghis Khan founded the Mongol Empire in 1206." },
+    { category: "History", difficulty: "hard", visual: "🏛️", question: "Which ancient wonder stood on the island of Pharos near Alexandria?",
+      answers: ["Colossus", "The Lighthouse", "Hanging Gardens", "Mausoleum"], correct: "The Lighthouse",
+      hint: "It guided ships into the harbour.", explanation: "The Lighthouse of Alexandria was one of the Seven Wonders of the Ancient World." },
+    { category: "History", difficulty: "normal", visual: "🏅", question: "Who was the first woman to win a Nobel Prize?",
+      answers: ["Marie Curie", "Mother Teresa", "Rosalind Franklin", "Florence Nightingale"], correct: "Marie Curie",
+      hint: "She researched radioactivity.", explanation: "Marie Curie won the Nobel Prize in Physics in 1903." },
+    { category: "History", difficulty: "easy", visual: "🧱", question: "Which famous wall was built to protect northern China?",
+      answers: ["Hadrian's Wall", "The Great Wall", "Berlin Wall", "Wall of Jericho"], correct: "The Great Wall",
+      hint: "It is visible in many photos of China.", explanation: "The Great Wall of China was built over many centuries." },
+
+    // =====================================
+    // MORE SCIENCE
+    // =====================================
+    { category: "Science", difficulty: "easy", visual: "💎", question: "What is the hardest natural substance on Earth?",
+      answers: ["Gold", "Iron", "Diamond", "Quartz"], correct: "Diamond",
+      hint: "It is made of carbon.", explanation: "Diamond is the hardest known natural material." },
+    { category: "Science", difficulty: "easy", visual: "🌱", question: "Which gas do plants absorb from the air?",
+      answers: ["Oxygen", "Nitrogen", "Carbon dioxide", "Helium"], correct: "Carbon dioxide",
+      hint: "Humans breathe it out.", explanation: "Plants use carbon dioxide for photosynthesis." },
+    { category: "Science", difficulty: "easy", visual: "🌌", question: "How many planets are in our solar system?",
+      answers: ["7", "8", "9", "10"], correct: "8",
+      hint: "Pluto is no longer counted as a planet.", explanation: "There are eight planets, from Mercury to Neptune." },
+    { category: "Science", difficulty: "normal", visual: "🥇", question: "What is the chemical symbol for gold?",
+      answers: ["Go", "Gd", "Au", "Ag"], correct: "Au",
+      hint: "It comes from the Latin word 'aurum'.", explanation: "Au is the symbol for gold." },
+    { category: "Science", difficulty: "normal", visual: "🧬", question: "Which part of the cell is known as its powerhouse?",
+      answers: ["Nucleus", "Mitochondria", "Ribosome", "Cell wall"], correct: "Mitochondria",
+      hint: "It produces most of the cell's energy.", explanation: "Mitochondria generate most of a cell's ATP." },
+    { category: "Science", difficulty: "hard", visual: "⚡", question: "Approximately how fast does light travel in a vacuum?",
+      answers: ["30,000 km/s", "300,000 km/s", "3,000,000 km/s", "300 km/s"], correct: "300,000 km/s",
+      hint: "It is about 3 followed by five zeros.", explanation: "Light travels at roughly 299,792 km per second." },
+    { category: "Science", difficulty: "easy", visual: "🪐", question: "Which is the largest planet in our solar system?",
+      answers: ["Saturn", "Jupiter", "Neptune", "Earth"], correct: "Jupiter",
+      hint: "It has a famous Great Red Spot.", explanation: "Jupiter is the largest planet, more than 300 times the mass of Earth." },
+    { category: "Science", difficulty: "normal", visual: "🦴", question: "How many bones does an adult human body have?",
+      answers: ["106", "206", "306", "406"], correct: "206",
+      hint: "Babies are born with more, but many fuse together.", explanation: "An adult human has 206 bones." },
+    { category: "Science", difficulty: "easy", visual: "🫁", question: "Which gas do humans need to breathe to survive?",
+      answers: ["Nitrogen", "Carbon dioxide", "Oxygen", "Hydrogen"], correct: "Oxygen",
+      hint: "It makes up about 21% of the air.", explanation: "Humans need oxygen for cellular respiration." },
+    { category: "Science", difficulty: "easy", visual: "🌡️", question: "At what temperature does water boil at sea level?",
+      answers: ["50 °C", "90 °C", "100 °C", "120 °C"], correct: "100 °C",
+      hint: "It is a nice round number on the Celsius scale.", explanation: "Water boils at 100 °C (212 °F) at sea level." },
+    { category: "Science", difficulty: "easy", visual: "🍎", question: "Which force keeps us on the ground?",
+      answers: ["Magnetism", "Gravity", "Friction", "Electricity"], correct: "Gravity",
+      hint: "Isaac Newton famously studied it.", explanation: "Gravity pulls objects toward the centre of the Earth." },
+    { category: "Science", difficulty: "normal", visual: "🩸", question: "Which blood cells carry oxygen around the body?",
+      answers: ["White blood cells", "Platelets", "Red blood cells", "Plasma cells"], correct: "Red blood cells",
+      hint: "They contain haemoglobin.", explanation: "Red blood cells carry oxygen using haemoglobin." },
+    { category: "Science", difficulty: "normal", visual: "🧂", question: "What is the chemical symbol for sodium?",
+      answers: ["So", "Sd", "Na", "S"], correct: "Na",
+      hint: "It comes from the Latin word 'natrium'.", explanation: "Na is the symbol for sodium." },
+    { category: "Science", difficulty: "normal", visual: "🧠", question: "Who developed the theory of general relativity?",
+      answers: ["Isaac Newton", "Albert Einstein", "Niels Bohr", "Galileo Galilei"], correct: "Albert Einstein",
+      hint: "He is famous for E = mc².", explanation: "Albert Einstein published general relativity in 1915." },
+    { category: "Science", difficulty: "normal", visual: "🎈", question: "Which is the lightest chemical element?",
+      answers: ["Helium", "Hydrogen", "Lithium", "Oxygen"], correct: "Hydrogen",
+      hint: "It has atomic number 1.", explanation: "Hydrogen is the lightest and most abundant element in the universe." },
+
+    // =====================================
+    // MORE WORLD FACTS
+    // =====================================
+    { category: "World Facts", difficulty: "normal", visual: "👥", question: "Which country has the largest population today?",
+      answers: ["China", "India", "United States", "Indonesia"], correct: "India",
+      hint: "It overtook China in 2023.", explanation: "India became the world's most populous country in 2023." },
+    { category: "World Facts", difficulty: "easy", visual: "💴", question: "What is the currency of Japan?",
+      answers: ["Won", "Yuan", "Yen", "Baht"], correct: "Yen",
+      hint: "Its symbol is ¥.", explanation: "The Japanese yen is the national currency." },
+    { category: "World Facts", difficulty: "normal", visual: "🗽", question: "Which country gave the Statue of Liberty to the United States?",
+      answers: ["United Kingdom", "France", "Spain", "Italy"], correct: "France",
+      hint: "It was a gift in 1886.", explanation: "France gifted the statue to the US in 1886." },
+    { category: "World Facts", difficulty: "hard", visual: "🏜️", question: "Which is the largest country in Africa by area?",
+      answers: ["Nigeria", "Egypt", "Algeria", "South Africa"], correct: "Algeria",
+      hint: "It is in North Africa, on the Mediterranean.", explanation: "Algeria has been Africa's largest country since South Sudan split from Sudan in 2011." },
+    { category: "World Facts", difficulty: "easy", visual: "🍣", question: "Which country is famous for inventing sushi as we know it today?",
+      answers: ["China", "Japan", "Thailand", "Vietnam"], correct: "Japan",
+      hint: "Its capital is Tokyo.", explanation: "Modern sushi developed in Japan." },
+    { category: "World Facts", difficulty: "easy", visual: "🕌", question: "In which country is the Taj Mahal located?",
+      answers: ["Pakistan", "India", "Bangladesh", "Nepal"], correct: "India",
+      hint: "It is in the city of Agra.", explanation: "The Taj Mahal is a marble mausoleum in Agra, India." },
+    { category: "World Facts", difficulty: "easy", visual: "🌍", question: "How many continents are there?",
+      answers: ["5", "6", "7", "8"], correct: "7",
+      hint: "Africa, Antarctica, Asia, Europe, Australia/Oceania, North America and South America.", explanation: "By the most common convention, there are seven continents." },
+    { category: "World Facts", difficulty: "normal", visual: "🗣️", question: "Which language has the most native speakers in the world?",
+      answers: ["English", "Spanish", "Mandarin Chinese", "Hindi"], correct: "Mandarin Chinese",
+      hint: "It is spoken mostly in China.", explanation: "Mandarin Chinese has the most native speakers." },
+    { category: "World Facts", difficulty: "normal", visual: "🌅", question: "Which country is nicknamed the Land of the Rising Sun?",
+      answers: ["China", "South Korea", "Japan", "Thailand"], correct: "Japan",
+      hint: "Its flag shows a red circle on white.", explanation: "Japan's name in Japanese means 'origin of the sun'." },
+    { category: "World Facts", difficulty: "hard", visual: "🏝️", question: "Which country has the most islands in the world?",
+      answers: ["Indonesia", "Philippines", "Sweden", "Canada"], correct: "Sweden",
+      hint: "It is in Northern Europe.", explanation: "Sweden has more than 260,000 islands, the most of any country." },
+
+    // =====================================
+    // MORE TECHNOLOGY (with sub-categories)
+    // =====================================
+    { category: "Technology", sub: "Programming", difficulty: "easy", visual: "🎨", question: "Which language is mainly used to style web pages?",
+      answers: ["HTML", "CSS", "SQL", "Python"], correct: "CSS",
+      hint: "It controls colours, fonts and layout.", explanation: "CSS (Cascading Style Sheets) styles web pages." },
+    { category: "Technology", sub: "Programming", difficulty: "normal", visual: "🔁", question: "What is a variable in programming?",
+      answers: ["A fixed error message", "A named place that stores a value", "A type of loop", "A hardware component"], correct: "A named place that stores a value",
+      hint: "Its value can change while the program runs.", explanation: "A variable stores a value that you can read and change." },
+    { category: "Technology", sub: "Programming", difficulty: "easy", visual: "🌐", question: "What does HTML stand for?",
+      answers: ["HyperText Markup Language", "High Tech Modern Language", "Home Tool Markup Language", "Hyperlink Text Machine Language"], correct: "HyperText Markup Language",
+      hint: "It describes the structure of a web page.", explanation: "HTML is the standard markup language for web pages." },
+    { category: "Technology", sub: "Programming", difficulty: "normal", visual: "💬", question: "Which symbols start a single-line comment in JavaScript?",
+      answers: ["//", "##", "<!--", "**"], correct: "//",
+      hint: "It is two identical characters.", explanation: "In JavaScript, // starts a single-line comment." },
+    { category: "Technology", sub: "Hardware", difficulty: "easy", visual: "🧠", question: "What does CPU stand for?",
+      answers: ["Central Processing Unit", "Computer Power Unit", "Core Program Utility", "Central Program Updater"], correct: "Central Processing Unit",
+      hint: "It is often called the brain of the computer.", explanation: "The CPU executes the instructions of a program." },
+    { category: "Technology", sub: "Hardware", difficulty: "normal", visual: "💾", question: "Which component keeps your files when the computer is turned off?",
+      answers: ["RAM", "SSD", "CPU cache", "Graphics card"], correct: "SSD",
+      hint: "RAM forgets everything when the power goes off.", explanation: "SSDs and hard drives are permanent storage; RAM is temporary." },
+    { category: "Technology", sub: "Hardware", difficulty: "easy", visual: "🎮", question: "What does GPU stand for?",
+      answers: ["General Processing Unit", "Graphics Processing Unit", "Game Power Unit", "Graphical Program Utility"], correct: "Graphics Processing Unit",
+      hint: "It handles images and video.", explanation: "A GPU is specialised for graphics and highly parallel work." },
+    { category: "Technology", sub: "Hardware", difficulty: "easy", visual: "🧮", question: "What does RAM stand for?",
+      answers: ["Random Access Memory", "Read And Modify", "Rapid Application Module", "Run Anytime Memory"], correct: "Random Access Memory",
+      hint: "It is the computer's short-term memory.", explanation: "RAM holds data that programs are using right now." },
+    { category: "Technology", sub: "Internet & Networks", difficulty: "easy", visual: "🌐", question: "What does HTTP stand for?",
+      answers: ["HyperText Transfer Protocol", "High Tech Transfer Program", "Hyper Terminal Text Process", "Home Tool Transfer Protocol"], correct: "HyperText Transfer Protocol",
+      hint: "It is the protocol used to load web pages.", explanation: "HTTP is the protocol browsers use to talk to web servers." },
+    { category: "Technology", sub: "Internet & Networks", difficulty: "normal", visual: "📖", question: "What does DNS do?",
+      answers: ["Encrypts your files", "Turns domain names into IP addresses", "Speeds up your Wi-Fi", "Blocks advertisements"], correct: "Turns domain names into IP addresses",
+      hint: "Think of it as the phone book of the internet.", explanation: "DNS translates names like example.com into IP addresses." },
+    { category: "Technology", sub: "Internet & Networks", difficulty: "easy", visual: "🔗", question: "What does URL stand for?",
+      answers: ["Uniform Resource Locator", "Universal Radio Link", "Unified Router Layer", "User Route List"], correct: "Uniform Resource Locator",
+      hint: "It is the address of a web page.", explanation: "A URL is the address used to locate a resource on the web." },
+    { category: "Technology", sub: "Internet & Networks", difficulty: "normal", visual: "🔒", question: "Which protocol is the secure version of HTTP?",
+      answers: ["FTP", "HTTPS", "SMTP", "SSH-HTTP"], correct: "HTTPS",
+      hint: "Look for the padlock in your browser.", explanation: "HTTPS encrypts the connection between your browser and a website." },
+    { category: "Technology", sub: "Cybersecurity", difficulty: "easy", visual: "🎣", question: "What is phishing?",
+      answers: ["A type of computer hardware", "Tricking people into giving up private information", "A way to speed up a network", "A programming language"], correct: "Tricking people into giving up private information",
+      hint: "It often arrives as a fake email or message.", explanation: "Phishing uses fake messages to steal passwords and personal data." },
+    { category: "Technology", sub: "Cybersecurity", difficulty: "normal", visual: "🔐", question: "What does two-factor authentication (2FA) add to a login?",
+      answers: ["A second proof of identity", "A faster connection", "A bigger password limit", "Automatic backups"], correct: "A second proof of identity",
+      hint: "It is often a code sent to your phone.", explanation: "2FA requires something besides your password, so a stolen password alone is not enough." },
+    { category: "Technology", sub: "Cybersecurity", difficulty: "normal", visual: "🦠", question: "What is malware?",
+      answers: ["Software designed to cause harm", "A type of firewall", "A backup tool", "A fast internet connection"], correct: "Software designed to cause harm",
+      hint: "The name is short for 'malicious software'.", explanation: "Malware includes viruses, ransomware and spyware." },
+    { category: "Technology", sub: "Cybersecurity", difficulty: "easy", visual: "🔑", question: "Which of these is the strongest password?",
+      answers: ["123456", "password", "qwerty", "A long mix of random words, numbers and symbols"], correct: "A long mix of random words, numbers and symbols",
+      hint: "Length and unpredictability matter most.", explanation: "Long, random passwords are far harder to guess or crack." },
+    { category: "Technology", sub: "AI & Data", difficulty: "easy", visual: "🤖", question: "What does AI stand for?",
+      answers: ["Automated Internet", "Artificial Intelligence", "Advanced Interface", "Applied Information"], correct: "Artificial Intelligence",
+      hint: "Machines that perform tasks that normally need human intelligence.", explanation: "AI stands for Artificial Intelligence." },
+    { category: "Technology", sub: "AI & Data", difficulty: "normal", visual: "🗄️", question: "Which language is used to query databases?",
+      answers: ["CSS", "SQL", "HTML", "Java"], correct: "SQL",
+      hint: "Its name stands for Structured Query Language.", explanation: "SQL is the standard language for working with relational databases." },
+    { category: "Technology", sub: "AI & Data", difficulty: "normal", visual: "📈", question: "What is machine learning?",
+      answers: ["Computers learning patterns from data", "Building physical robots", "Repairing computer hardware", "Writing web pages"], correct: "Computers learning patterns from data",
+      hint: "The program improves with experience instead of fixed rules.", explanation: "Machine learning lets computers learn patterns from data without being explicitly programmed for each task." },
+    { category: "Technology", sub: "AI & Data", difficulty: "normal", visual: "🗃️", question: "What does the term 'big data' refer to?",
+      answers: ["Very large and complex sets of data", "A very large hard drive", "A fast processor", "A type of database language"], correct: "Very large and complex sets of data",
+      hint: "It is too large for traditional tools to handle easily.", explanation: "Big data describes datasets too large or complex for traditional processing." }
 ];
 
 
@@ -216,6 +466,7 @@ const FLAG_LIST = [
 FLAG_LIST.forEach(([code, name, continent]) => {
     questions.push({
         category: "Flags",
+        sub: continent,
         flag: code,
         continent: continent,
         visual: "🏳️",
@@ -297,6 +548,9 @@ const mysteryQuestions = [
 // =====================================
 // GAME SETTINGS
 // =====================================
+
+// Extra game modes register their question pools here (see extra-modes.js)
+const extraPools = {};
 
 const QUESTIONS_PER_ROUND = 10;
 const QUESTION_TIME = 20;
@@ -542,6 +796,8 @@ function startGame(category = "All") {
         available = questions;
     } else if (category === "Mystery World") {
         available = mysteryQuestions;
+    } else if (extraPools[category]) {
+        available = extraPools[category];
     } else if (category.includes(":")) {
         const [main, sub] = category.split(":");
         available = questions.filter(q => q.category === main && q.sub === sub);
@@ -604,6 +860,9 @@ function showQuestion() {
     // Flag questions get fresh wrong answers every time
     if (q.flag) refreshFlagAnswers(q);
 
+    // Modes like Capitals rebuild their question every time it is shown
+    if (q.refresh) q.refresh(q);
+
     questionDisplay.textContent = q.question;
     categoryDisplay.textContent =
         q.category.toUpperCase() + (q.sub ? " • " + q.sub.toUpperCase() : "");
@@ -637,7 +896,7 @@ function showQuestion() {
 
     answersDisplay.innerHTML = "";
 
-    shuffle(q.answers).forEach((answer, index) => {
+    (q.fixedOrder ? q.answers : shuffle(q.answers)).forEach((answer, index) => {
 
         const button = document.createElement("button");
         button.className = "answer";
@@ -899,7 +1158,9 @@ function updatePowerups() {
     $("double-count").textContent = doublePoints;
 
     hintButton.disabled = hints <= 0 || hintUsed || answered;
-    fiftyButton.disabled = fiftyFifty <= 0 || fiftyUsed || answered;
+    const currentQ = selectedQuestions[currentQuestion];
+    fiftyButton.disabled = fiftyFifty <= 0 || fiftyUsed || answered ||
+        !!(currentQ && currentQ.noFifty);
     $("time-btn").disabled = extraTime <= 0 || timeUsed || answered;
     $("skip-btn").disabled = skips <= 0 || answered || dailyMode;
     $("double-btn").disabled = doublePoints <= 0 || doubleActive || answered;
@@ -1148,10 +1409,10 @@ function renderLeaderboard() {
 // =====================================
 
 const achievements = [
-    { id: "first", name: "First Victory", icon: "🎯", description: "Answer correctly once" },
-    { id: "five", name: "Knowledge Seeker", icon: "📚", description: "Answer 5 questions correctly" },
-    { id: "ten", name: "Quiz Master", icon: "🏆", description: "Answer 10 questions correctly" },
-    { id: "streak", name: "On Fire", icon: "🔥", description: "Reach a streak of 5" }
+    { id: "first", name: "First Victory", icon: "fa-bullseye", description: "Answer correctly once" },
+    { id: "five", name: "Knowledge Seeker", icon: "fa-book-open", description: "Answer 5 questions correctly" },
+    { id: "ten", name: "Quiz Master", icon: "fa-trophy", description: "Answer 10 questions correctly" },
+    { id: "streak", name: "On Fire", icon: "fa-fire", description: "Reach a streak of 5" }
 ];
 
 function unlockAchievement(id) {
@@ -1184,7 +1445,9 @@ function renderAchievements() {
         div.className = "achievement" + (unlocked ? " unlocked" : " locked");
 
         const icon = document.createElement("span");
-        icon.textContent = item.icon;
+        const iconEl = document.createElement("i");
+        iconEl.className = "fa-solid " + item.icon;
+        icon.appendChild(iconEl);
 
         const name = document.createElement("strong");
         name.textContent = item.name;

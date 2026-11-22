@@ -31,6 +31,8 @@
     function build() {
         const style = document.createElement("style");
         style.textContent = `
+            #eu-container .eu-under{fill:#5c6b8a;stroke:#5c6b8a;stroke-width:.8px;
+            vector-effect:non-scaling-stroke;pointer-events:none}
             #eu-screen{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;
                 justify-content:center;background:rgba(5,8,20,.88);padding:16px}
             #eu-screen.eu-hidden{display:none}
@@ -139,6 +141,14 @@
 
         const path = d3.geoPath(projection);
         const g = svg.append("g");
+
+        // Seam-filler: same-color copy of every country underneath, so no gaps show between neighbours
+        g.append("g")
+        .selectAll(".eu-under")
+        .data(data)
+        .join("path")
+        .attr("class", "eu-under")
+        .attr("d", path);
 
         g.selectAll(".eu-country")
             .data(data)
