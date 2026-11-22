@@ -1,0 +1,66 @@
+/* =====================================
+   TECHNOLOGY DROPDOWN
+===================================== */
+
+.nav-group {
+    width: 100%;
+}
+
+.nav-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle .chevron {
+    margin-left: auto;
+    margin-right: 0;
+    width: auto;
+    font-size: 12px;
+    color: #7787a3;
+    transition: transform 0.25s;
+}
+
+.nav-toggle.open .chevron {
+    transform: rotate(180deg);
+}
+
+.nav-toggle.has-active {
+    background: #233b58;
+    color: #61d4f1;
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 16px;
+    border-left: 2px solid #293650;
+    margin-left: 18px;
+    transition: max-height 0.3s ease;
+}
+
+.submenu.open {
+    max-height: 500px;
+    margin-bottom: 8px;
+}
+
+.sub-item {
+    padding: 11px 14px;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.sub-item i {
+    font-size: 13px;
+}
+
+@media (max-width: 550px) {
+    .nav-group {
+        width: auto;
+    }
+
+    .submenu {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+    }
+}

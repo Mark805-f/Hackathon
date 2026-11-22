@@ -7,6 +7,9 @@
     <title>World Challenge</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modes.css">
+    <link rel="stylesheet" href="tech-menu.css">
+    <link rel="stylesheet" href="crud.css">
 
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -40,10 +43,37 @@
             All Questions
         </button>
 
-        <button class="nav-item" data-category="Flags">
-            <i class="fa-solid fa-flag"></i>
-            Flags
+        <div class="nav-group">
+    <button class="nav-item nav-toggle" id="flags-toggle" aria-expanded="false">
+        <i class="fa-solid fa-flag"></i>
+        Flags
+        <i class="fa-solid fa-chevron-down chevron"></i>
+    </button>
+
+    <div class="submenu" id="flags-submenu">
+        <button class="nav-item sub-item" data-category="Flags">
+            <i class="fa-solid fa-flag"></i> All Flags
         </button>
+        <button class="nav-item sub-item" data-category="Flags:Europe">
+            <i class="fa-solid fa-earth-europe"></i> Europe
+        </button>
+        <button class="nav-item sub-item" data-category="Flags:Asia">
+            <i class="fa-solid fa-earth-asia"></i> Asia
+        </button>
+        <button class="nav-item sub-item" data-category="Flags:Africa">
+            <i class="fa-solid fa-earth-africa"></i> Africa
+        </button>
+        <button class="nav-item sub-item" data-category="Flags:North America">
+            <i class="fa-solid fa-earth-americas"></i> North America
+        </button>
+        <button class="nav-item sub-item" data-category="Flags:South America">
+            <i class="fa-solid fa-earth-americas"></i> South America
+        </button>
+        <button class="nav-item sub-item" data-category="Flags:Oceania">
+            <i class="fa-solid fa-earth-oceania"></i> Oceania
+        </button>
+    </div>
+</div>
 
         <button class="nav-item" data-category="Geography">
             <i class="fa-solid fa-map"></i>
@@ -65,9 +95,43 @@
             World Facts
         </button>
 
-        <button class="nav-item" data-category="Technology">
-            <i class="fa-solid fa-microchip"></i>
-            Technology
+        <div class="nav-group">
+    <button class="nav-item nav-toggle" id="tech-toggle" aria-expanded="false">
+        <i class="fa-solid fa-microchip"></i>
+        Technology
+        <i class="fa-solid fa-chevron-down chevron"></i>
+    </button>
+
+    <div class="submenu" id="tech-submenu">
+        <button class="nav-item sub-item" data-category="Technology">
+            <i class="fa-solid fa-layer-group"></i> All Technology
+        </button>
+        <button class="nav-item sub-item" data-category="Technology:Programming">
+            <i class="fa-solid fa-code"></i> Programming
+        </button>
+        <button class="nav-item sub-item" data-category="Technology:Hardware">
+            <i class="fa-solid fa-computer"></i> Hardware
+        </button>
+        <button class="nav-item sub-item" data-category="Technology:Internet & Networks">
+            <i class="fa-solid fa-network-wired"></i> Internet &amp; Networks
+        </button>
+        <button class="nav-item sub-item" data-category="Technology:Cybersecurity">
+            <i class="fa-solid fa-shield-halved"></i> Cybersecurity
+        </button>
+        <button class="nav-item sub-item" data-category="Technology:AI & Data">
+            <i class="fa-solid fa-robot"></i> AI &amp; Data
+        </button>
+    </div>
+</div>
+
+        <button class="nav-item map-nav" id="map-nav">
+            <i class="fa-solid fa-location-dot"></i>
+            Find the Country
+        </button>
+
+        <button class="nav-item map-nav" id="europe-nav">
+            <i class="fa-solid fa-earth-europe"></i>
+            Europe (No Borders)
         </button>
 
         <div class="sidebar-bottom">
@@ -255,6 +319,33 @@
                     <b id="fifty-count">2</b>
 
                 </button>
+
+                <button id="time-btn" class="power-button">
+    <span class="power-icon"><i class="fa-solid fa-hourglass-half"></i></span>
+    <span>
+        <strong>+10 Seconds</strong>
+        <small>Get extra time</small>
+    </span>
+    <b id="time-count">1</b>
+</button>
+
+<button id="skip-btn" class="power-button">
+    <span class="power-icon"><i class="fa-solid fa-forward"></i></span>
+    <span>
+        <strong>Skip</strong>
+        <small>Move on, no penalty</small>
+    </span>
+    <b id="skip-count">1</b>
+</button>
+
+<button id="double-btn" class="power-button">
+    <span class="power-icon"><i class="fa-solid fa-bolt"></i></span>
+    <span>
+        <strong>Double Points</strong>
+        <small>x2 if you get it right</small>
+    </span>
+    <b id="double-count">1</b>
+</button>
 
                 <div class="reward-card">
 
@@ -717,6 +808,33 @@
 
 </div>
 
+<div id="map-screen" class="map-screen hidden">
+    <div class="map-box">
+        <div class="map-top">
+            <div>
+                <p class="map-label">FIND THIS COUNTRY</p>
+                <h2 id="map-target">Loading...</h2>
+            </div>
+            <div class="map-info">
+                <span>Round <strong id="map-round">1/10</strong></span>
+                <span>Score <strong id="map-score">0</strong></span>
+                <span>Tries <strong id="map-tries">3</strong></span>
+            </div>
+            <button id="map-close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <p id="map-feedback"></p>
+        <div id="map-container"></div>
+        <p class="map-help">Scroll to zoom, drag to move, click a country to answer.</p>
+
+        <div id="map-end" class="map-end hidden">
+            <h2>Map Challenge Complete!</h2>
+            <p>Final score: <strong id="map-final">0</strong></p>
+            <button id="map-again">Play Again</button>
+        </div>
+    </div>
+</div>
+
 
 <!-- LEVEL UP POPUP -->
 <div id="levelup-screen" class="levelup-screen">
@@ -758,7 +876,15 @@
 
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
 <script src="script.js"></script>
+<script src="map-game.js"></script>
+<script src="modes.js"></script>
+<script src="tech-menu.js"></script>
+<script src="flags-menu.js"></script>
+<script src="crud.js"></script>
+<script src="map-game1.js"></script>
 
 </body>
 </html>
