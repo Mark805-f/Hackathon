@@ -875,21 +875,21 @@ function showQuestion() {
     // Visual: real flag image or emoji
     visualDisplay.innerHTML = "";
 
-    if (q.flag) {
+        if (q.flag) {
         const img = document.createElement("img");
         img.className = "flag-img";
         img.src = "https://flagcdn.com/w320/" + q.flag + ".png";
         img.srcset = "https://flagcdn.com/w640/" + q.flag + ".png 2x";
         img.alt = "Country flag";
 
-        // If the image fails to load (offline), fall back to the emoji
+        // If the image fails to load (offline), fall back to the icon badge
         img.onerror = () => {
-            visualDisplay.textContent = q.visual;
+            renderVisual(visualDisplay, q);       // <-- changed
         };
 
         visualDisplay.appendChild(img);
     } else {
-        visualDisplay.textContent = q.visual;
+        renderVisual(visualDisplay, q);           // <-- changed
     }
 
     feedbackDisplay.textContent = "";
