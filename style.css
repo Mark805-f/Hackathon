@@ -2261,3 +2261,13 @@ h1, h2, h3,
 .side-label, .section-heading > span, .daily-tag, .map-label {
     font-weight: 700;
 }
+
+.answer:nth-child(1) .key { background: #3b82f6; color: #fff; }
+.answer:nth-child(2) .key { background: #a78bfa; color: #fff; }
+.answer:nth-child(3) .key { background: #f59e0b; color: #fff; }
+.answer:nth-child(4) .key { background: #ec4899; color: #fff; }
+
+.answer:nth-child(1) { border-left: 4px solid #3b82f6; }
+.answer:nth-child(2) { border-left: 4px solid #a78bfa; }
+.answer:nth-child(3) { border-left: 4px solid #f59e0b; }
+.answer:nth-child(4) { border-left: 4px solid #ec4899; }
